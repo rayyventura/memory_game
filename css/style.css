@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Luckiest Guy', cursive;
+}
+body{
+   background-colort: rgb(238, 249, 191);
+}
+
+header {
+    color:#1f5f46;
+    font-size: 56px;
+    /* font-weight: bold; */
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20px;
+ 
+    text-shadow: 0px 1px 1px #023809;
+}
+.primeira-coluna img:hover, .segunda-coluna img:hover{
+    cursor:pointer;
+    width: 125px;
+}
+.primeira-coluna img, .segunda-coluna img{
+    box-shadow: 0px 0px 7px #023809;
+    border-radius: 9px;
+}
+
+.primeira-coluna{
+    display: flex;
+    gap:51px;
+
+    margin-top: 71px;
+    justify-content: center;
+}
+.segunda-coluna{
+    display: flex;
+    gap:51px;
+
+    margin-top: 50px;
+    justify-content: center;
+}
+@media(max-width: 965px){
+    .primeira-coluna, .segunda-coluna{
+       flex-wrap: wrap;
+    }
+}
