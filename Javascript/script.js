@@ -1,0 +1,1 @@
+const quantidadeCartas = parseInt(prompt("Com quantas cartas você quer jogar? Escolha um número Pare entre 4 e 14"));
