@@ -75,9 +75,13 @@ header {
       width:100%;
       height:100%
   }
-
+.display-none{
+display: none;
+}
   
- 
+ .display{
+ display: flex;
+ }
 @media(max-width: 965px){
     .primeira-coluna, .segunda-coluna{
        flex-wrap: wrap;
