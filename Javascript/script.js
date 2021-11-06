@@ -41,7 +41,6 @@ for(let i = metadeQtdCartas-1; i >=0 ; i--){
 const cartas1 =  document.querySelectorAll(".card1");
 const cartas2 =  document.querySelectorAll(".card2");
 
-
 for(let i=0; i<metadeQtdCartas;i++){
     cartas1[i].classList.add("display");
 }
@@ -71,12 +70,30 @@ function cartaMatch(){
     }
     primeiraCarta=null;
     segundaCarta=null;
+    
 }
+let jogarNovamente=''
 function jogoFinalizado(){
     const cartasClicadas1 = primeiraColuna.querySelectorAll(".carta-clicada").length;
     const cartasClicadas2 = segundaColuna.querySelectorAll(".carta-clicada").length;
     if(cartasClicadas1+cartasClicadas2===quantidadeCartas){
-        const mensagemDeVitoria = `Você ganhou em ${contador*2} jogadas!`;
+        const mensagemDeVitoria = `Você ganhou em ${contador*2} jogadas, utilizando ${tempo} segundos!`;
         alert(mensagemDeVitoria);
+        clearInterval(id);
+        jogarNovamente=prompt('Quer Jogar novamente? Então digite "sim"').toLowerCase();
+
+    }
+    if(jogarNovamente==='sim'){
+        window.location.reload();
+    }else if(cartasClicadas1+cartasClicadas2===quantidadeCartas){
+        const fundoEsmaecido=document.querySelector(".fundo-esmaecido");
+        fundoEsmaecido.classList.add('display');
     }
 }
+const cronometro = document.querySelector('.cronometro');
+let tempo=0;
+function cronometrar(){
+    tempo++;
+    cronometro.innerHTML=tempo;
+}
+const id=setInterval(cronometrar,1000);

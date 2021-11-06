@@ -74,6 +74,31 @@ header {
   .resolvido{
     transform: rotateY(0deg);
   }
+  .cronometro{
+    position: fixed;
+    right:30px;
+    top:30px;
+
+    color: rgb(236, 60, 60);
+  }
+  .mensagem-final{
+    position: fixed;
+    left: 25vw;
+    right: 20vw;
+    bottom:20vw;
+
+    color:rgb(236, 60, 60);
+    font-size: 30px
+  }
+  .fundo-esmaecido{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
   .back-face img {
       width:100%;
       height:100%
