@@ -68,7 +68,10 @@ header {
   .front-face{
     transform: rotateY(0deg);
   }
-  .cartaClicada{
+  .carta-clicada{
+    transform: rotateY(0deg);
+  }
+  .resolvido{
     transform: rotateY(0deg);
   }
   .back-face img {
