@@ -9,7 +9,7 @@ body{
 header {
     color:#1f5f46;
     font-size: 56px;
-    /* font-weight: bold; */
+    
 
     display: flex;
     justify-content: center;
@@ -76,10 +76,11 @@ header {
   }
   .cronometro{
     position: fixed;
-    right:30px;
-    top:30px;
+    right:45px;
+    top:58px;
 
     color: rgb(236, 60, 60);
+    font-size: 20px;
   }
   .mensagem-final{
     position: fixed;
@@ -114,4 +115,18 @@ display: none;
     .primeira-coluna, .segunda-coluna{
        flex-wrap: wrap;
     }
+    header{
+      font-size: 36px;;
+    }
+}
+@media(max-width: 234px){
+  .cronometro{
+    top:30px;
+  }
+}
+@media(max-width: 184px){
+  .cronometro{
+    top:5px;
+    right:5px;
+  }
 }

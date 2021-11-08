@@ -77,7 +77,7 @@ function jogoFinalizado(){
     const cartasClicadas1 = primeiraColuna.querySelectorAll(".carta-clicada").length;
     const cartasClicadas2 = segundaColuna.querySelectorAll(".carta-clicada").length;
     if(cartasClicadas1+cartasClicadas2===quantidadeCartas){
-        const mensagemDeVitoria = `Você ganhou em ${contador*2} jogadas, utilizando ${tempo} segundos!`;
+        const mensagemDeVitoria = `Você ganhou com ${contador*2} jogadas em ${tempo} segundos!`;
         alert(mensagemDeVitoria);
         clearInterval(id);
         jogarNovamente=prompt('Quer Jogar novamente? Então digite "sim"').toLowerCase();
