@@ -25,16 +25,16 @@ let metadeQtdCartas = (quantidadeCartas/2);
 
 for (let i = 0; i < metadeQtdCartas; i++){
     primeiraColuna.innerHTML += ` 
-                <div class="card1 display-none card ${images[i]}"  onclick="cartaClicada(this)"  >
-                    <div class="front-face face"><img src="assets/cover.jpg" alt="card verde com um papagaio no centro"></div>
-                    <div class="back-face face"><img src="${images[i]}"  alt="crazy parrot"></div>
+                <div class="card1 display-none card ${images[i]}"  onclick="cartaClicada(this)" data-identifier="card" >
+                    <div class="front-face face" data-identifier="front-face"><img src="assets/cover.jpg" alt="card verde com um papagaio no centro"></div>
+                    <div class="back-face face" data-identifier="back-face" ><img src="${images[i]}"  alt="crazy parrot"></div>
                 </div>`
 }
 for(let i = metadeQtdCartas-1; i >=0 ; i--){
     segundaColuna.innerHTML +=`
-            <div class="card2 display-none card ${images[i]}"  " onclick="cartaClicada(this)">
-                <div class="front-face face"><img src="assets/cover.jpg" alt="card verde com um papagaio no centro"></div>
-                <div class="back-face face"><img src="${images[i]}"  alt="crazy parrot"></div>
+            <div class="card2 display-none card ${images[i]}"  " onclick="cartaClicada(this)" data-identifier="card">
+                <div class="front-face face" data-identifier="front-face"><img src="assets/cover.jpg" alt="card verde com um papagaio no centro"></div>
+                <div class="back-face face" data-identifier="back-face"><img src="${images[i]}"  alt="crazy parrot"></div>
             </div>`
 }
 
@@ -51,6 +51,12 @@ let primeiraCarta, segundaCarta;
 
 contador=0;
 function cartaClicada (opcao){
+    if(opcao.classList.contains('carta-clicada')){
+        return false;
+    }
+    if(primeiraCarta!==undefined && segundaCarta!==undefined){
+        return;
+    }
     opcao.classList.add('carta-clicada');
     if(primeiraCarta==null){
         primeiraCarta = opcao;
@@ -68,8 +74,8 @@ function cartaMatch(){
         primeiraCarta.classList.remove("carta-clicada");
         segundaCarta.classList.remove("carta-clicada");
     }
-    primeiraCarta=null;
-    segundaCarta=null;
+    primeiraCarta=undefined;
+    segundaCarta=undefined;
     
 }
 let jogarNovamente=''
