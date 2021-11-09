@@ -48,7 +48,7 @@ for(let i = metadeQtdCartas-1; i >=0 ; i--){
     cartas2[i].classList.add("display");
 }
 let primeiraCarta, segundaCarta;
-let id =0;
+let id;
 contador=0;
 cronometroClick = true;
 function cartaClicada (opcao){
@@ -61,6 +61,11 @@ function cartaClicada (opcao){
     opcao.classList.add('carta-clicada');
     if(primeiraCarta==undefined){
         primeiraCarta = opcao;
+        if(cronometroClick){
+            id = setInterval(cronometrar,1000);
+            cronometroClick=false;
+        }
+           
         return false;
     }
      segundaCarta=opcao;
@@ -68,11 +73,7 @@ function cartaClicada (opcao){
      contador++;
      setTimeout(jogoFinalizado,500);
     }
-    if(cronometroClick){
-        id = setInterval(cronometrar,1000);
-        cronometroClick=false;
-    }
-    
+
 function cartaMatch(){
     const match=primeiraCarta.classList.item(3)===segundaCarta.classList.item(3);
     if(!match){
