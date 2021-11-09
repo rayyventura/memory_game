@@ -58,8 +58,9 @@ function cartaClicada (opcao){
         return;
     }
     opcao.classList.add('carta-clicada');
-    if(primeiraCarta==null){
+    if(primeiraCarta==undefined){
         primeiraCarta = opcao;
+        const id=setInterval(cronometrar,1000);
         return false;
     }
      segundaCarta=opcao;
@@ -102,4 +103,3 @@ function cronometrar(){
     tempo++;
     cronometro.innerHTML=tempo;
 }
-const id=setInterval(cronometrar,1000);
