@@ -48,7 +48,7 @@ for(let i = metadeQtdCartas-1; i >=0 ; i--){
     cartas2[i].classList.add("display");
 }
 let primeiraCarta, segundaCarta;
-
+let id =0;
 contador=0;
 cronometroClick = true;
 function cartaClicada (opcao){
@@ -69,7 +69,7 @@ function cartaClicada (opcao){
      setTimeout(jogoFinalizado,500);
     }
     if(cronometroClick){
-        const id=setInterval(cronometrar,1000);
+        id = setInterval(cronometrar,1000);
         cronometroClick=false;
     }
     
