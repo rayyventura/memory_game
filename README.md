@@ -1,5 +1,5 @@
 # Crazy Parrot 🦜
-Site Published at: https://rayyventura.github.io/Memory_Game_-Crazy_Parrot-/
+Site Published at: https://rayyventura.github.io/memory_game/
 
 ## Dinamic Memory Game </br>
 🎯 Target: **Javascript** (Programming Logic)</br>
